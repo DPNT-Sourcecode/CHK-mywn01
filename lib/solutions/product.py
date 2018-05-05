@@ -58,6 +58,7 @@ class QProduct(Product):
         return nq3 * 80 + nq1 * self.base_price
 
 
+
 A = DiscountedProduct('A', 50, ((3, 130), (5, 200)))
 B = BProduct('B', 30)
 C = Product('C', 20)
@@ -68,7 +69,7 @@ G = Product('G', 20)
 H = DiscountedProduct('H', 10, offers=((5, 45), (10, 80)))
 I = Product('I', 35)
 J = Product('J', 60)
-K = DiscountedProduct('K', 80, offers=((2, 150),))
+K = DiscountedProduct('K', 70, offers=((2, 120),))
 L = Product('L', 90)
 M = MProduct('M', 15)
 N = Product('N', 40)
@@ -76,14 +77,14 @@ O = Product('O', 10)
 P = DiscountedProduct('P', 50, ((5, 200),))
 Q = QProduct('Q', 30)
 R = Product('R', 50)
-S = Product('S', 30)
+S = Product('S', 20)
 T = Product('T', 20)
 U = DiscountedProduct('U', 40, ((4, 120),))
 V = DiscountedProduct('V', 50, ((2, 90), (3, 130)))
 W = Product('W', 20)
-X = Product('X', 90)
-Y = Product('Y', 10)
-Z = Product('Z', 50)
+X = Product('X', 17)
+Y = Product('Y', 20)
+Z = Product('Z', 21)
 
 products = {
     'A': A,
