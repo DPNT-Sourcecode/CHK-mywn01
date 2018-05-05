@@ -1,5 +1,21 @@
 import re
 
+
+
+class Product(object):
+
+    def __init__(name, price, special_offer):
+        self.name = name
+        self.price = price
+        self.offer_amount, self.offer_price = special_offer
+
+    def get_price(n):
+        offer = n // self.offer_amount * self.offer_price
+        remainder = n % self.offer_amount * self.price
+        return offer + remainder
+
+
+
 # noinspection PyUnusedLocal
 # skus = unicode string
 def extract_skus(skus):
@@ -14,6 +30,9 @@ def extract_skus(skus):
         else:
             item_quantities[i] = int(q) if q else 1
     return item_quantities
+
+
+def apply_pricing(item_quantities):
 
 
 def checkout(skus):
