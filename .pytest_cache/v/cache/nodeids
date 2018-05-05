@@ -18,5 +18,8 @@
   "test/solutions/test_checkout.py::test_checkout[ABCDABCD-215]", 
   "test/solutions/test_checkout.py::test_checkout[E-40]", 
   "test/solutions/test_checkout.py::test_checkout[EE-80]", 
-  "test/solutions/test_checkout.py::test_checkout[BEE-80]"
+  "test/solutions/test_checkout.py::test_checkout[BEE-80]", 
+  "test/solutions/test_checkout.py::test_checkout[BBEE-110]", 
+  "test/solutions/test_checkout.py::test_checkout[BBBBEE-155]", 
+  "test/solutions/test_checkout.py::test_checkout[BBBBEEEE-205]"
 ]
