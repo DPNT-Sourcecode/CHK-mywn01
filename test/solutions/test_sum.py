@@ -1,12 +1,11 @@
-import unittest
+import pytest
 
 from lib.solutions.sum import sum
 
-
-class TestSum(unittest.TestCase):
-    def test_sum(self):
-        self.assertEqual(sum(1, 2), 3)
-
-
-if __name__ == '__main__':
-    unittest.main()
+@pytest.mark.parametrize('a, b, expected', [
+    (1, 2, 3),
+    (0, 0, 0),
+    (99, 99, 198),
+])
+def test_sum(a, b, expected):
+    assert sum(a, b) == expected
