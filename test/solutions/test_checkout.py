@@ -1,8 +1,16 @@
 import pytest
 
-from lib.solutions.checkout import (checkout, extract_skus)
+from lib.solutions.checkout import (checkout, extract_skus, group_discount_cost)
 from lib.solutions.product import *
 
+
+@pytest.mark.parametrize('skus, expected', [
+    ({'A': 1}, 0),
+    ({'S': 1}, 20),
+    ({'S': 3}, 45),
+])
+def test_group_discount_cost(skus, expected):
+    assert group_discount_cost(skus) == expected
 
 
 @pytest.mark.parametrize('discounted_product, item_quantities, expected', [

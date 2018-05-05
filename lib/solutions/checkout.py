@@ -4,11 +4,12 @@ from collections import Counter
 import itertools
 from .product import products
 
+GROUP = 'STXYZ'
 
 def group_discount_cost(skus):
     group_items = ''
-    for i in 'STXYZ':
-        group_items += i * skus[i]
+    for i in GROUP:
+        group_items += i * skus.get(i, 0)
     n_group = len(group_items)
     n_extra = n_group % 3
     extra_combos = itertools.combinations(group_items, n_extra)
@@ -18,8 +19,11 @@ def group_discount_cost(skus):
 def total_price(skus):
     cost = 0
     for p in products:
+        if p in GROUP:
+            continue
         product = products[p]
         cost += product.get_price(skus)
+    cost += group_discount_cost(skus)
     return cost
 
 def extract_skus(skus):
