@@ -4,5 +4,10 @@
   "test/solutions/test_checkout.py::test_checkout[ABCDABCD-230]": true, 
   "test/solutions/test_checkout.py::test_checkout[UUUUUU-160]": true, 
   "test/solutions/test_checkout.py::test_get_price[discounted_product6-item_quantities6-230]": true, 
-  "test/solutions/test_checkout.py::test_get_price[discounted_product7-item_quantities7-210]": true
+  "test/solutions/test_checkout.py::test_get_price[discounted_product7-item_quantities7-210]": true, 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus0-0]": true, 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus1-20]": true, 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus2-45]": true, 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus3-45]": true, 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus4-65]": true
 }

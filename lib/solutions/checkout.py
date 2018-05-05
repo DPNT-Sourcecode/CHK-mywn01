@@ -13,7 +13,9 @@ def group_discount_cost(skus):
     n_group = len(group_items)
     n_extra = n_group % 3
     extra_combos = itertools.combinations(group_items, n_extra)
+    print(list(extra_combos))
     extra_prices = [sum([products[i].get_price(skus) for i in ec]) for ec in extra_combos]
+
     return (n_group // 3) * 45 + min(extra_prices)
 
 def total_price(skus):
