@@ -7,7 +7,9 @@ from lib.solutions.checkout import checkout, extract_skus, apply_pricing
     ('AB', {'A': 1, 'B': 1}),
     ('2AB', {'A': 2, 'B': 1}),
     ('2A3C', {'A': 2, 'C': 3}),
-    ('2A3D2A', {'A': 4, 'D': 3})
+    ('2A3D2A', {'A': 4, 'D': 3}),
+    pytest.param('3E', {}, marks=pytest.mark.xfail(raises=ValueError)),
+    pytest.param('A3', {}, marks=pytest.mark.xfail(raises=ValueError))
 ])
 def test_extract_skus(skus, expected):
     extract = extract_skus(skus)
@@ -15,7 +17,11 @@ def test_extract_skus(skus, expected):
 
 
 @pytest.mark.parametrize('item_quanties, expected', [
-    ({'A': 1}, {'A': 50})
+    ({'A': 1}, {'A': 50}),
+    ({'A': 1, 'B': 1}, {'A': 50, 'B': 30}),
+    ({'A': 2, 'B': 1}, {'A': 100, 'B': 30}),
+    ({'A': 4, 'D': 3})
+
 ])
 def test_apply_pricing(item_quanties, expected):
     prices = apply_pricing(item_quanties)
