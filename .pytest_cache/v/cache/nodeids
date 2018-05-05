@@ -35,5 +35,6 @@
   "test/solutions/test_checkout.py::test_checkout[AB-80]", 
   "test/solutions/test_checkout.py::test_checkout[1A1B-80]", 
   "test/solutions/test_checkout.py::test_checkout[2AC-120]", 
-  "test/solutions/test_checkout.py::test_checkout[3AC-150]"
+  "test/solutions/test_checkout.py::test_checkout[3AC-150]", 
+  "test/solutions/test_checkout.py::test_checkout[ABCDABCD-215]"
 ]

@@ -1,4 +1,5 @@
 {
   "test/solutions/test_checkout.py::test_apply_pricing[A-D]": true, 
-  "test/solutions/test_checkout.py::test_checkout[1A1A-200]": true
+  "test/solutions/test_checkout.py::test_checkout[1A1A-200]": true, 
+  "test/solutions/test_checkout.py::test_checkout[ABCDABCD-230]": true
 }

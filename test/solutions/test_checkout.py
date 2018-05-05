@@ -63,6 +63,7 @@ def test_apply_pricing(item_quanties, expected):
     ('1A1B', 80),
     ('2AC', 120),
     ('3AC', 150),
+    ('ABCDABCD', 215),
 ])
 def test_checkout(skus, price_expected):
     price = checkout(skus)
