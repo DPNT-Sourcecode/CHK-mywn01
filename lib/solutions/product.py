@@ -16,7 +16,7 @@ class DiscountedProduct(Product):
         self.offers = offers
 
     def get_price(self, item_quantities):
-        n = item_quantities[self.name]
+        n = item_quantities.get(self.name, 0)
         nx = []
         px = []
         for offer in self.offers[::-1]:
@@ -27,3 +27,6 @@ class DiscountedProduct(Product):
         nx.append(n)
         px.append(self.base_price)
         return sum([nx * px for nx, px in zip(nx, px)])
+
+A = DiscountedProduct('A', 50, ((3, 130), (5, 200)))
+B = DiscountedProduct('B', 50, ((2, 45),))

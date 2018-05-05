@@ -1,5 +1,7 @@
 [
-  "test/solutions/test_checkout.py::test_get_price[discounted_product0-50]", 
+  "test/solutions/test_checkout.py::test_get_price[discounted_product0-item_quantities0-50]", 
+  "test/solutions/test_checkout.py::test_get_price[discounted_product1-item_quantities1-0]", 
+  "test/solutions/test_checkout.py::test_get_price[discounted_product2-item_quantities2-45]", 
   "test/solutions/test_checkout.py::test_extract_skus[A-expected0]", 
   "test/solutions/test_checkout.py::test_extract_skus[AB-expected1]", 
   "test/solutions/test_checkout.py::test_extract_skus[AB-expected2]", 

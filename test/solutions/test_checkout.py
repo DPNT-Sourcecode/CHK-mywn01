@@ -1,18 +1,15 @@
 import pytest
 
 from lib.solutions.checkout import (checkout, extract_skus)
-from lib.solutions.product import DiscountedProduct
-
-@pytest.fixture(params=[
-    ('A', 50, ((3, 130), (5, 200))),
-    ('B', 50, ((2, 45))),
-])
-def discounted_product(request):
-    return DiscountedProduct(*request.param)
+from lib.solutions.product import A, B
 
 
-@pytest.mark.parametrize('item_quantities, expected', [
-    {'A': 1},
+
+@pytest.mark.parametrize('discounted_product, item_quantities, expected', [
+    (A, {'A': 1}, 50),
+    (B, {'A': 1}, 0),
+    (B, {'B': 2}, 45),
+
 ])
 def test_get_price(discounted_product, item_quantities, expected):
     assert discounted_product.get_price(item_quantities) == expected
