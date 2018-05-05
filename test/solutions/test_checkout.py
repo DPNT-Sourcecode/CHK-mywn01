@@ -1,6 +1,6 @@
 import pytest
 
-from lib.solutions.checkout import checkout, extract_skus
+from lib.solutions.checkout import checkout, extract_skus, apply_pricing
 
 @pytest.mark.parametrize('skus, expected', [
     ('A', {'A': 1}),
@@ -13,6 +13,13 @@ def test_extract_skus(skus, expected):
     extract = extract_skus(skus)
     assert extract == expected
 
+
+@pytest.mark.parametrize('item_quanties, expected', [
+    ({'A': 1}, {'A': 50})
+])
+def test_apply_pricing(item_quanties, expected):
+    prices = apply_pricing(item_quanties)
+    assert prices == expected
 
 # @pytest.mark.parametrize('skus, price_excpected', [
 #     ('A', 50),

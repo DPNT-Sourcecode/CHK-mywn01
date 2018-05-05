@@ -5,13 +5,13 @@ import re
 
 class Product(object):
 
-    def __init__(price, special_offer=None):
+    def __init__(self, price, special_offer=None):
         self.price = price
         if special_offer is None:
             special_offer = (1, price)
         self.offer_amount, self.offer_price = special_offer
 
-    def get_price(n):
+    def get_price(self, n):
         offer = (n // self.offer_amount) * self.offer_price
         remainder = (n % self.offer_amount) * self.price
         return offer + remainder
@@ -39,7 +39,8 @@ def extract_skus(skus):
 
 
 def apply_pricing(item_quantities):
-
+    prices = {i: products[i].get_price(q) for i, q in item_quantities.items()}
+    return prices
 
 def checkout(skus):
     try:

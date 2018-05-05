@@ -3,5 +3,6 @@
   "test/solutions/test_checkout.py::test_extract_skus[AB-expected1]", 
   "test/solutions/test_checkout.py::test_extract_skus[2AB-expected2]", 
   "test/solutions/test_checkout.py::test_extract_skus[2A3C-expected3]", 
-  "test/solutions/test_checkout.py::test_extract_skus[2A3D2A-expected4]"
+  "test/solutions/test_checkout.py::test_extract_skus[2A3D2A-expected4]", 
+  "test/solutions/test_checkout.py::test_apply_pricing[item_quanties0-expected0]"
 ]
