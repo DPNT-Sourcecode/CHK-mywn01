@@ -1,5 +1,8 @@
 [
-  "test/solutions/test_hello.py::test_hello", 
+  "test/solutions/test_hello.py::test_hello[Barry-Barry]", 
+  "test/solutions/test_hello.py::test_hello[Lucy-Lucy]", 
+  "test/solutions/test_hello.py::test_hello[norman-Norman]", 
+  "test/solutions/test_hello.py::test_hello[edgar ALLeN pOE-Edgar Allen Poe]", 
   "test/solutions/test_sum.py::test_sum[1-2-3]", 
   "test/solutions/test_sum.py::test_sum[0-0-0]", 
   "test/solutions/test_sum.py::test_sum[99-99-198]"
