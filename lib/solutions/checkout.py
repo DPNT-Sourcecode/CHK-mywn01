@@ -7,7 +7,12 @@ def extract_skus(skus):
     if ''.join(sku_list) != skus:
         raise ValueError('Invalid SKUs supplied.')
     quantity_items = [(s[:-1], s[-1]) for s in sku_list]
-    item_quantities = {q[1]: int(q[0]) for q in quantity_items}
+    item_quantities = {}
+    for q, i in quantity_items:
+        if i in item_quantities:
+            item_quantities[i] += int(q)
+        else:
+            item_quantities[i] = int(q) if q else 1
     return item_quantities
 
 
