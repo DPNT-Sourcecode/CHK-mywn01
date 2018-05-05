@@ -1,23 +1,29 @@
+# noinspection PyUnusedLocal
+# skus = unicode string
 import re
-
 
 
 class Product(object):
 
-    def __init__(name, price, special_offer):
-        self.name = name
+    def __init__(price, special_offer=None):
         self.price = price
+        if special_offer is None:
+            special_offer = (1, price)
         self.offer_amount, self.offer_price = special_offer
 
     def get_price(n):
-        offer = n // self.offer_amount * self.offer_price
-        remainder = n % self.offer_amount * self.price
+        offer = (n // self.offer_amount) * self.offer_price
+        remainder = (n % self.offer_amount) * self.price
         return offer + remainder
 
+products = {
+    'A': Product(50, (3, 130)),
+    'B': Product(30, (2, 45)),
+    'C': Product(20),
+    'D': Product(15),
+}
 
 
-# noinspection PyUnusedLocal
-# skus = unicode string
 def extract_skus(skus):
     sku_list = re.findall(r'\d*[A-D]', skus)
     if ''.join(sku_list) != skus:
