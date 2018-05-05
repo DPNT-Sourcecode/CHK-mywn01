@@ -16,6 +16,7 @@ def total_price(na, nb, nc, nd, ne, nf):
     ne2 = ne // 2
     nf3 = nf // 3
     nf1 = nf % 3
+    print(nf3)
 
     # Get costs
     ca = na5 * 200 + na3 * 130 + na1 * 50
@@ -25,7 +26,7 @@ def total_price(na, nb, nc, nd, ne, nf):
     ce = ne * 40
     cf = nf3 * 20 + nf1 * 10
 
-    return ca + cb + cc + cd + ce
+    return ca + cb + cc + cd + ce + cf
 
 def extract_skus(skus):
     counter = Counter(skus)
@@ -48,5 +49,6 @@ def checkout(skus):
         skus['C'],
         skus['D'],
         skus['E'],
+        skus['F'],
     )
     return cost
