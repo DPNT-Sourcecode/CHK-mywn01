@@ -9,11 +9,11 @@ def total_price(na, nb, nc, nd, ne):
     na5 = na // 5
     na3 = (na % 5) // 3
     na1 = na - 5 * na5 - 3 * na3
-    nb = nb - ne // 2
+    nb = max(0, nb - ne // 2)
     nb2 = nb // 2
     nb1 = nb % 2
     ne2 = ne // 2
-    ca = na5 * 200 + na3 * 130 + na * 50
+    ca = na5 * 200 + na3 * 130 + na1 * 50
     cb = nb2 * 45 + nb1 * 30
     cc = nc * 20
     cd = nd * 15
