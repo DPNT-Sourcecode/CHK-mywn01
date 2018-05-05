@@ -3,5 +3,8 @@
   "test/solutions/test_checkout.py::test_group_discount_cost[skus1-20]", 
   "test/solutions/test_checkout.py::test_group_discount_cost[skus2-45]", 
   "test/solutions/test_checkout.py::test_group_discount_cost[skus3-45]", 
-  "test/solutions/test_checkout.py::test_group_discount_cost[skus4-65]"
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus4-65]", 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus5-85]", 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus6-90]", 
+  "test/solutions/test_checkout.py::test_group_discount_cost[skus7-107]"
 ]

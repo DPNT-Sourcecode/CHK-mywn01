@@ -10,6 +10,9 @@ from lib.solutions.product import *
     ({'S': 3}, 45),
     ({'S': 2, 'T': 1}, 45),
     ({'S': 2, 'T': 2}, 65),
+    ({'S': 2, 'T': 3}, 85),
+    ({'S': 2, 'T': 3, 'X': 1}, 90),
+    ({'S': 2, 'T': 3, 'X': 2}, 107),
 ])
 def test_group_discount_cost(skus, expected):
     assert group_discount_cost(skus) == expected
