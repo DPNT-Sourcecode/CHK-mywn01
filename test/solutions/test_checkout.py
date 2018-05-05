@@ -44,7 +44,7 @@ def test_apply_pricing(item_quanties, expected):
     ('3C', 60),
     ('D', 15),
     ('2D', 30),
-    ('1A1A', 200),
+    ('1A1A', 100),
     ('AB', 80),
     ('1A1B', 80),
     ('2AC', 120),
