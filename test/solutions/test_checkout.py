@@ -57,9 +57,9 @@ def test_extract_skus(skus, expected):
     ('FFFF', 30),
     ('FFFFFF', 40),
     ('AAABBQQRRRZ', 405),
-    ('UUU', 80),
+    ('UUU', 120),
     ('UUUU', 120),
-    ('UUUUUU', 160),
+    ('UUUUUU', 200),
 ])
 def test_checkout(skus, price_expected):
     price = checkout(skus)
