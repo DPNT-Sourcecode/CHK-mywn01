@@ -31,8 +31,8 @@ class DiscountedProduct(Product):
 class BProduct(Product):
 
     def get_price(self, item_quantities):
-        nb = item_quantities['B']
-        ne = item_quantities['E']
+        nb = item_quantities.get('B', 0)
+        ne = item_quantities.get('E', 0)
         nb = max(0, nb - ne // 2)
         nb2 = nb // 2
         nb1 = nb % 2
@@ -41,20 +41,21 @@ class BProduct(Product):
 class MProduct(Product):
 
     def get_price(self, item_quantities):
-        nm = item_quantities['M']
-        nn = item_quantities['N']
+        nm = item_quantities.get('M', 0)
+        nn = item_quantities.get('N', 0)
         nm = max(0, nm - nn // 3)
         return nm * self.base_price
 
 class QProduct(Product):
 
     def get_price(self, item_quantities):
-        nq = item_quantities['Q']
-        nr = item_quantities['R']
+        nq = item_quantities.get('Q', 0)
+        nr = item_quantities.get('R', 0)
         nq = max(0, nq - nr // 3)
         nq3 = nq // 3
         nq1 = nq % 3
-        return nq3 * 80 + nq * self.base_price
+        print(nq)
+        return nq3 * 80 + nq1 * self.base_price
 
 
 A = DiscountedProduct('A', 50, ((3, 130), (5, 200)))

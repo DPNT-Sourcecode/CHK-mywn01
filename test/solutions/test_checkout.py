@@ -12,8 +12,8 @@ from lib.solutions.product import *
     (A, {'A': 6, 'B': 2}, 250),
     (Q, {'Q': 1}, 30),
     (Q, {'Q': 3}, 80),
-    (Q, {'Q': 3, 'R': 2}, 230),
-    (Q, {'Q': 3, 'R': 3}, 210)
+    (Q, {'Q': 3, 'R': 2}, 80),
+    (Q, {'Q': 3, 'R': 3}, 60)
 
 ])
 def test_get_price(discounted_product, item_quantities, expected):
@@ -37,25 +37,25 @@ def test_extract_skus(skus, expected):
 
 @pytest.mark.parametrize('skus, price_expected', [
     ('A', 50),
-    # ('AA', 100),
-    # ('AAA', 130),
-    # ('AAAA', 180),
-    # ('B', 30),
-    # ('C', 20),
-    # ('D', 15),
-    # ('AB', 80),
-    # ('ABCDABCD', 215),
-    # ('E', 40),
-    # ('EE', 80),
-    # ('BEE', 80),
-    # ('BBEE', 110),
-    # ('BBBBEE', 155),
-    # ('BBBBEEEE', 205),
-    # ('F', 10),
-    # ('FF', 20),
-    # ('FFF', 20),
-    # ('FFFF', 30),
-    # ('FFFFFF', 40),
+    ('AA', 100),
+    ('AAA', 130),
+    ('AAAA', 180),
+    ('B', 30),
+    ('C', 20),
+    ('D', 15),
+    ('AB', 80),
+    ('ABCDABCD', 215),
+    ('E', 40),
+    ('EE', 80),
+    ('BEE', 80),
+    ('BBEE', 110),
+    ('BBBBEE', 155),
+    ('BBBBEEEE', 205),
+    ('F', 10),
+    ('FF', 20),
+    ('FFF', 20),
+    ('FFFF', 30),
+    ('FFFFFF', 40),
 ])
 def test_checkout(skus, price_expected):
     price = checkout(skus)

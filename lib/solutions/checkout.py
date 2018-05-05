@@ -10,6 +10,7 @@ def total_price(skus):
     for p in products:
         product = products[p]
         cost += product.get_price(skus)
+    return cost
 
 def extract_skus(skus):
     counter = Counter(skus)
