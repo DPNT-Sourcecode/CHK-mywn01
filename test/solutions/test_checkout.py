@@ -26,7 +26,7 @@ def test_group_discount_cost(skus, expected):
     (Q, {'Q': 1}, 30),
     (Q, {'Q': 3}, 80),
     (Q, {'Q': 3, 'R': 2}, 80),
-    (Q, {'Q': 3, 'R': 3}, 60)
+    (Q, {'Q': 3, 'R': 3}, 60),
 
 ])
 def test_get_price(discounted_product, item_quantities, expected):
@@ -69,10 +69,14 @@ def test_extract_skus(skus, expected):
     ('FFF', 20),
     ('FFFF', 30),
     ('FFFFFF', 40),
-    ('AAABBQQRRRZ', 405),
+    ('AAABBQQRRRZ', 376),
     ('UUU', 120),
     ('UUUU', 120),
     ('UUUUUU', 200),
+    ('XXX', 45),
+    ('XXXX', 62),
+    ('TTTT', 65),
+    ('AAASTX', 175),
 ])
 def test_checkout(skus, price_expected):
     price = checkout(skus)

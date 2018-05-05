@@ -1,6 +1,7 @@
 {
   "test/solutions/test_checkout.py::test_apply_pricing[A-D]": true, 
   "test/solutions/test_checkout.py::test_checkout[1A1A-200]": true, 
+  "test/solutions/test_checkout.py::test_checkout[AAABBQQRRRZ-405]": true, 
   "test/solutions/test_checkout.py::test_checkout[ABCDABCD-230]": true, 
   "test/solutions/test_checkout.py::test_checkout[UUUUUU-160]": true, 
   "test/solutions/test_checkout.py::test_get_price[discounted_product6-item_quantities6-230]": true, 
