@@ -6,7 +6,9 @@ from .product import products
 
 
 def total_price(skus):
-    pass
+    cost = 0
+    for product in products:
+        cost += product.get_price(skus)
 
 def extract_skus(skus):
     counter = Counter(skus)
@@ -20,15 +22,8 @@ def checkout(skus):
         skus = extract_skus(skus)
     except ValueError:
         return -1
-    for p in VALID_PRODUCTS:
+    for p in products:
         if p not in skus:
             skus[p] = 0
-    cost = total_price(
-        skus['A'],
-        skus['B'],
-        skus['C'],
-        skus['D'],
-        skus['E'],
-        skus['F'],
-    )
+    cost = total_price(skus)
     return cost

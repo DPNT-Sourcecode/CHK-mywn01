@@ -1,7 +1,7 @@
 import pytest
 
 from lib.solutions.checkout import (checkout, extract_skus)
-from lib.solutions.product import A, B
+from lib.solutions.product import *
 
 
 
@@ -10,6 +10,10 @@ from lib.solutions.product import A, B
     (B, {'A': 1}, 0),
     (B, {'B': 2}, 45),
     (A, {'A': 6, 'B': 2}, 250),
+    (Q, {'Q': 1}, 30),
+    (Q, {'Q': 3}, 80),
+    (Q, {'Q': 3, 'R': 2}, 230),
+    (Q, {'Q': 3, 'R': 3}, 210)
 
 ])
 def test_get_price(discounted_product, item_quantities, expected):
