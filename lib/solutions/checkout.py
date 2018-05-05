@@ -6,6 +6,7 @@ VALID_PRODUCTS = ['A', 'B', 'C', 'D', 'E']
 
 
 def total_price(na, nb, nc, nd, ne):
+    pass
 
 
 def extract_skus(skus):
