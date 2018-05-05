@@ -24,7 +24,6 @@ class DiscountedProduct(Product):
             nx.append(ni)
             px.append(offer[1])
             n -= ni * offer[0]
-        print(n)
         nx.append(n)
         px.append(self.base_price)
         return sum([nx * px for nx, px in zip(nx, px)])

@@ -7,7 +7,8 @@ from .product import products
 
 def total_price(skus):
     cost = 0
-    for product in products:
+    for p in products:
+        product = products[p]
         cost += product.get_price(skus)
 
 def extract_skus(skus):
