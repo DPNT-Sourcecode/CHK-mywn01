@@ -2,10 +2,11 @@
 # skus = unicode string
 from collections import Counter
 
-VALID_PRODUCTS = ['A', 'B', 'C', 'D', 'E']
+VALID_PRODUCTS = ['A', 'B', 'C', 'D', 'E', 'F']
 
 
-def total_price(na, nb, nc, nd, ne):
+def total_price(na, nb, nc, nd, ne, nf):
+    # Get numbers of collections
     na5 = na // 5
     na3 = (na % 5) // 3
     na1 = na - 5 * na5 - 3 * na3
@@ -13,11 +14,17 @@ def total_price(na, nb, nc, nd, ne):
     nb2 = nb // 2
     nb1 = nb % 2
     ne2 = ne // 2
+    nf3 = nf // 3
+    nf1 = nf % 3
+
+    # Get costs
     ca = na5 * 200 + na3 * 130 + na1 * 50
     cb = nb2 * 45 + nb1 * 30
     cc = nc * 20
     cd = nd * 15
     ce = ne * 40
+    cf = nf3 * 20 + nf1 * 10
+
     return ca + cb + cc + cd + ce
 
 def extract_skus(skus):
