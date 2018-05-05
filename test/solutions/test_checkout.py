@@ -9,6 +9,7 @@ from lib.solutions.product import A, B
     (A, {'A': 1}, 50),
     (B, {'A': 1}, 0),
     (B, {'B': 2}, 45),
+    (A, {'A': 6, 'B': 2}, 250),
 
 ])
 def test_get_price(discounted_product, item_quantities, expected):
