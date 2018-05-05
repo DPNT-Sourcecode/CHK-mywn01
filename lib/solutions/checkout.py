@@ -25,7 +25,7 @@ products = {
 
 def parse_skus(skus):
     sku_list = re.findall(r'\d*[A-D]', skus)
-    return sku_list
+    return tuple(sku_list)
 
 
 def extract_skus(skus):
@@ -36,7 +36,7 @@ def extract_skus(skus):
     item_quantities = {}
     for q, i in quantity_items:
         if i in item_quantities:
-            item_quantities[i] += int(q)
+            item_quantities[i] += int(q) if q else 1
         else:
             item_quantities[i] = int(q) if q else 1
     return item_quantities
