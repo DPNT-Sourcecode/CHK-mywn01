@@ -47,3 +47,5 @@ def checkout(skus):
         skus = extract_skus(skus)
     except ValueError:
         return -1
+    prices = apply_pricing(skus)
+    return sum(prices.values())
