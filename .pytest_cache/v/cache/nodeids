@@ -6,5 +6,14 @@
   "test/solutions/test_checkout.py::test_extract_skus[AAAADDD-expected4]", 
   "test/solutions/test_checkout.py::test_extract_skus[3E-expected5]", 
   "test/solutions/test_checkout.py::test_extract_skus[A3-expected6]", 
-  "test/solutions/test_checkout.py::test_extract_skus[Et tu, Brute?-expected7]"
+  "test/solutions/test_checkout.py::test_extract_skus[Et tu, Brute?-expected7]", 
+  "test/solutions/test_checkout.py::test_checkout[A-50]", 
+  "test/solutions/test_checkout.py::test_checkout[AA-100]", 
+  "test/solutions/test_checkout.py::test_checkout[AAA-130]", 
+  "test/solutions/test_checkout.py::test_checkout[AAAA-180]", 
+  "test/solutions/test_checkout.py::test_checkout[B-30]", 
+  "test/solutions/test_checkout.py::test_checkout[C-20]", 
+  "test/solutions/test_checkout.py::test_checkout[D-15]", 
+  "test/solutions/test_checkout.py::test_checkout[AB-80]", 
+  "test/solutions/test_checkout.py::test_checkout[ABCDABCD-215]"
 ]

@@ -17,17 +17,17 @@ def test_extract_skus(skus, expected):
     extract = extract_skus(skus)
     assert extract == expected
 
-# @pytest.mark.parametrize('skus, price_expected', [
-#     ('A', 50),
-#     ('AA', 100),
-#     ('AAA', 130),
-#     ('AAAA', 180),
-#     ('B', 30),
-#     ('C', 20),
-#     ('D', 15),
-#     ('AB', 80),
-#     ('ABCDABCD', 215),
-# ])
-# def test_checkout(skus, price_expected):
-#     price = checkout(skus)
-#     assert price == price_expected
+@pytest.mark.parametrize('skus, price_expected', [
+    ('A', 50),
+    ('AA', 100),
+    ('AAA', 130),
+    ('AAAA', 180),
+    ('B', 30),
+    ('C', 20),
+    ('D', 15),
+    ('AB', 80),
+    ('ABCDABCD', 215),
+])
+def test_checkout(skus, price_expected):
+    price = checkout(skus)
+    assert price == price_expected
