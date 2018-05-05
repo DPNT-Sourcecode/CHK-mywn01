@@ -4,10 +4,10 @@ import re
 # skus = unicode string
 def extract_skus(skus):
     sku_list = re.findall(r'\d*[A-D]', skus)
-    if sum(sku_list) != skus:
-        raise ValueError('Invalid SKUs')
+    if ''.join(sku_list) != skus:
+        raise ValueError('Invalid SKUs supplied.')
     quantity_items = [(s[:-1], s[-1]) for s in sku_list]
-    item_quantities = {q[1]: q[0] for q in quantity_items}
+    item_quantities = {q[1]: int(q[0]) for q in quantity_items}
     return item_quantities
 
 

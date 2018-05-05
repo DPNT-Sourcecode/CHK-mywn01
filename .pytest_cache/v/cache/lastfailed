@@ -1,5 +1,4 @@
 {
-  "test/solutions/test_checkout.py::test_extract_skus[2A3C-expected3]": true, 
   "test/solutions/test_checkout.py::test_extract_skus[2A3D2A-expected4]": true, 
   "test/solutions/test_checkout.py::test_extract_skus[2AB-expected2]": true, 
   "test/solutions/test_checkout.py::test_extract_skus[A-expected0]": true, 
