@@ -23,9 +23,13 @@ products = {
     'D': Product(15),
 }
 
+def parse_skus(skus):
+    sku_list = re.findall(r'\d*[A-D]', skus)
+    return sku_list
+
 
 def extract_skus(skus):
-    sku_list = re.findall(r'\d*[A-D]', skus)
+    sku_list = parse_skus(skus)
     if ''.join(sku_list) != skus:
         raise ValueError('Invalid SKUs supplied.')
     quantity_items = [(s[:-1], s[-1]) for s in sku_list]

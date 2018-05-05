@@ -30,6 +30,7 @@ def test_apply_pricing(item_quanties, expected):
 
 @pytest.mark.parametrize('skus, price_expected', [
     ('A', 50),
+    ('AA', 100),
     ('1A', 50),
     ('3A', 130),
     ('4A', 180),

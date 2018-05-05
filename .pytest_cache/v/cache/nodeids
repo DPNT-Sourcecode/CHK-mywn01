@@ -12,6 +12,7 @@
   "test/solutions/test_checkout.py::test_apply_pricing[item_quanties2-expected2]", 
   "test/solutions/test_checkout.py::test_apply_pricing[item_quanties3-expected3]", 
   "test/solutions/test_checkout.py::test_checkout[A-50]", 
+  "test/solutions/test_checkout.py::test_checkout[AA-100]", 
   "test/solutions/test_checkout.py::test_checkout[1A-50]", 
   "test/solutions/test_checkout.py::test_checkout[3A-130]", 
   "test/solutions/test_checkout.py::test_checkout[4A-180]", 
